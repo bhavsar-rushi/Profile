@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rushi Bhavsar — Java Developer</title>
+<meta name="description" content="Rushi Bhavsar, Java developer — 9 years building Liferay, Spring Boot and React portals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f6;
+    --ink:#16191c;
+    --muted:#6a6f76;
+    --line:#e4e1da;
+    --accent:#a5540d;
+    --accent-soft:#c97a2f;
+    --bar:#243b3d;
+    --bg-card:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14171a;
+      --ink:#eceae5;
+      --muted:#9aa0a6;
+      --line:#2a2e32;
+      --accent:#e3a35a;
+      --accent-soft:#e3a35a;
+      --bar:#5fa39c;
+      --bg-card:#1a1d20;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14171a; --ink:#eceae5; --muted:#9aa0a6; --line:#2a2e32;
+    --accent:#e3a35a; --accent-soft:#e3a35a; --bar:#5fa39c; --bg-card:#1a1d20;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  .mono{ font-family:'JetBrains Mono', ui-monospace, Menlo, monospace; }
+  .wrap{
+    max-width:700px;
+    margin:0 auto;
+    padding:5rem 1.5rem 6rem;
+  }
+  header.hero{
+    margin-bottom:3rem;
+  }
+  h1{
+    font-size:clamp(2.1rem, 5vw, 3rem);
+    font-weight:700;
+    margin:0 0 .35rem;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--accent);
+    font-size:.95rem;
+    margin:0 0 1.4rem;
+  }
+  .contact{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.4rem 1.4rem;
+    font-family:'JetBrains Mono', monospace;
+    font-size:.82rem;
+    color:var(--muted);
+  }
+  .contact a{ color:var(--muted); text-decoration:none; border-bottom:1px solid var(--line); margin-right:1.4rem; }
+  .contact a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  .rule{ height:1px; background:var(--line); border:0; margin:2.6rem 0 1.6rem; }
+
+  .heading{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--accent);
+    font-size:.85rem;
+    margin:0 0 1.1rem;
+  }
+  .heading::before{ content:"// "; opacity:.6; }
+
+  p.lede{
+    font-size:1.08rem;
+    max-width:60ch;
+    color:var(--ink);
+  }
+
+  .skills{ display:grid; grid-template-columns: 8.5rem 1fr; gap:.55rem 1rem; font-size:.95rem; }
+  .skills dt{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    color:var(--muted);
+    padding-top:.2rem;
+  }
+  .skills dd{ margin:0; }
+
+  .entry{
+    border-left:2px solid var(--bar);
+    padding:.1rem 0 .1rem 1.15rem;
+    margin-bottom:2.1rem;
+  }
+  .entry h3{
+    font-family:'Source Serif 4', serif;
+    font-size:1.12rem;
+    font-weight:600;
+    margin:0 0 .3rem;
+  }
+  .entry .meta{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.78rem;
+    color:var(--muted);
+    margin:0 0 .6rem;
+    line-height:1.7;
+  }
+  .entry .meta b{ color:var(--accent-soft); font-weight:500; }
+  .entry p{ margin:.5rem 0; color:var(--ink); font-size:.98rem; }
+  .entry ul{ margin:.5rem 0 0; padding-left:1.1rem; }
+  .entry li{ margin-bottom:.35rem; font-size:.98rem; }
+  .entry li::marker{ color:var(--accent); }
+
+  .edu h3{ margin:0 0 .25rem; font-size:1.05rem; font-weight:600; }
+  .edu .meta{ font-family:'JetBrains Mono', monospace; font-size:.82rem; color:var(--muted); }
+
+  footer{
+    margin-top:3.5rem;
+    font-family:'JetBrains Mono', monospace;
+    font-size:.75rem;
+    color:var(--muted);
+  }
+
+  @media (max-width:520px){
+    .wrap{ padding:3.2rem 1.2rem 4rem; }
+    .skills{ grid-template-columns: 1fr; gap:.15rem 0; }
+    .skills dt{ padding-top:.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Rushi Bhavsar</h1>
+    <p class="role">java developer — liferay · spring boot · react</p>
+    <div class="contact">
+      <a href="tel:+918347630700">+91 83476 30700</a>
+      <a href="mailto:bhavsar.rushi@hotmail.com">bhavsar.rushi@hotmail.com</a>
+    </div>
+  </header>
+
+  <p class="lede">Nine years building and modernizing enterprise portals on Liferay, Spring Boot, and Spring Portlet MVC — integrating external services through JAXB and REST, and shipping full-stack work with React, Docker, Kubernetes, and modern CI/CD.</p>
+
+  <hr class="rule">
+  <p class="heading">skills</p>
+  <dl class="skills">
+    <dt>backend</dt><dd>Java, Spring Boot, Spring Portlet MVC, Liferay 6.2–7.3, REST APIs, JAXB, MapStruct, microservice &amp; monolithic architecture</dd>
+    <dt>data</dt><dd>MSSQL, MySQL, Snowflake</dd>
+    <dt>frontend</dt><dd>React, jQuery, AJAX, HTML, CSS</dd>
+    <dt>devops</dt><dd>Docker, Kubernetes (AKS), GitHub Actions, Azure DevOps CI/CD, Apache2</dd>
+    <dt>tooling</dt><dd>Git, SVN, JIRA, test-driven development</dd>
+  </dl>
+
+  <hr class="rule">
+  <p class="heading">experience</p>
+
+  <div class="entry">
+    <h3>Real Estate Investment &amp; Tenancy Portal — Liferay → React/Spring Boot Migration</h3>
+    <p class="meta"><b>role</b> software engineer &nbsp;·&nbsp; <b>tech</b> React, Spring Boot, Spring JPA, MSSQL, Azure Static Web Apps, Azure Functions, Docker</p>
+    <p>Platform for separate accounts, open- and closed-end funds, public securities, and entity-level investments serving pension funds, insurers, governments, and private clients.</p>
+    <ul>
+      <li>Collaborated with stakeholders to preserve functionality while migrating Liferay to Spring Boot.</li>
+      <li>Owned task estimation, solution design, development, and release management.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h3>Real Estate Investment &amp; Tenancy Portal</h3>
+    <p class="meta"><b>role</b> software engineer &nbsp;·&nbsp; <b>tech</b> Liferay 7.3, Snowflake, EclipseLink (JPA), ElasticSearch, Azure Function/Logic App, AKS</p>
+    <ul>
+      <li>Captured requirements directly with stakeholders; produced estimates and solution designs.</li>
+      <li>Led development, branch, and release management while managing the Liferay team.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h3>Partner Support Portal — Financial Technology Company</h3>
+    <p class="meta"><b>role</b> software engineer &nbsp;·&nbsp; <b>tech</b> Liferay 7, MySQL, React</p>
+    <p>Single entry point for partner-ecosystem services — catalog, deal registration, order management, quoting and compensation, training — serving 170,000 partners across 174 countries in 24 languages.</p>
+    <ul>
+      <li>Modified core Liferay functionality; built customized MVC portlets and components.</li>
+      <li>Developed REST APIs exposing portal services to vendors; built proofs of concept.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h3>Insurance Provider Portal</h3>
+    <p class="meta"><b>role</b> software engineer, backend &nbsp;·&nbsp; <b>tech</b> Liferay 7, Java, JAXB, MapStruct, RESTful Web Services, WebSocket, ACORD</p>
+    <p>Portal for generating vehicle insurance policies, saving data to ACORD via JAXB, initiating endorsements, and viewing premium amounts.</p>
+    <ul>
+      <li>Built RESTful endpoints consumed by the React front end.</li>
+      <li>Integrated ACORD mapping and generated data models using JAXB.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h3>Travel Service Provider Portal</h3>
+    <p class="meta"><b>role</b> software engineer &nbsp;·&nbsp; <b>tech</b> Liferay 6.2, MySQL, Spring MVC, Oracle RightNow, Oracle Knowledge Management, SiteMinder, IDM</p>
+    <p>Portal for creating incidents in Oracle RightNow, searching Oracle Knowledge Management, and viewing alerts and organization-wide news, with advanced user-organization and permission management.</p>
+    <ul>
+      <li>Modified core Liferay functionality (hooks and EXT) and developed portlets.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+  <p class="heading">education</p>
+  <div class="edu">
+    <h3>Government Engineering College, Modasa</h3>
+    <p class="meta">B.E. Computer Engineering, 7.4 CGPA &nbsp;·&nbsp; July 2013 – June 2017</p>
+  </div>
+
+  <footer>rushi bhavsar · updated 2026</footer>
+</div>
+</body>
+</html>
